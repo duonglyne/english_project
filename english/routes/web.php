@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.homepage.homepage');
+});
+Route::get('/test', function () {
+    return view('frontend.homepage.test');
+});
+Route::get('/register', function () {
+    return view('frontend.account.register');
+});
+Route::get('/login', function () {
+    return view('frontend.account.login');
 });
 
 
