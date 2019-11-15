@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html"> <img src="{{ asset('frontend/img/logo.png') }}" alt="logo"> </a>
+                    <a class="navbar-brand" href="{{route('home')}}"> <img src="{{ asset('frontend/img/logo.png') }}" alt="logo"> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -37,8 +37,26 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
-                            <li class="d-none d-lg-block">
-                                <a class="btn_1" href="#">Login</a>
+                            <li class="d-none d-lg-block nav-item dropdown">
+                                @if (Auth::check())
+{{--                                <div class="header-top-avatar"><img class="header-top-avatar img-responsive" src="{{Voyager::image(Auth::user()->avatar)}}">--}}
+{{--                                </div>--}}
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {{Auth::user()->name}}
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="single-blog.html">Trang Cá Nhân</a>
+                                        <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Đăng xuất
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </a>
+                                    </div>
+                                @else
+                                <a class="btn_1" href="{{route('login')}}">Login</a>
+                                @endif
                             </li>
                         </ul>
                     </div>

@@ -74,34 +74,7 @@
     <!-- upcoming_event part start-->
 
     <!-- learning part start-->
-    <section class="learning_part">
-        <div class="container">
-            <div class="row align-items-sm-center align-items-lg-stretch">
-                <div class="col-md-7 col-lg-7">
-                    <div class="learning_img">
-                        <img src="img/learning_img.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-5 col-lg-5">
-                    <div class="learning_member_text">
-                        <h5>About us</h5>
-                        <h2>Learning with Love
-                            and Laughter</h2>
-                        <p>Fifth saying upon divide divide rule for deep their female all hath brind Days and beast
-                            greater grass signs abundantly have greater also
-                            days years under brought moveth.</p>
-                        <ul>
-                            <li><span class="ti-pencil-alt"></span>Him lights given i heaven second yielding seas
-                                gathered wear</li>
-                            <li><span class="ti-ruler-pencil"></span>Fly female them whales fly them day deep given
-                                night.</li>
-                        </ul>
-                        <a href="#" class="btn_1">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- learning part end-->
 
     <!-- member_counter counter start -->
@@ -149,99 +122,39 @@
                 </div>
             </div>
             <div class="row">
+                @foreach($courses as $course)
                 <div class="col-sm-6 col-lg-4">
                     <div class="single_special_cource">
-                        <img src="img/special_cource_1.png" class="special_img" alt="">
+                        <img src="{{asset('storage/'.str_replace('\\','/',$course->image))}}" class="special_img" alt="">
                         <div class="special_cource_text">
-                            <a href="course-details.html" class="btn_4">Web Development</a>
-                            <h4>$130.00</h4>
-                            <a href="course-details.html"><h3>Web Development</h3></a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                            <div class="author_info">
-                                <div class="author_img">
-                                    <img src="img/author/author_1.png" alt="">
-                                    <div class="author_info_text">
-                                        <p>Conduct by:</p>
-                                        <h5><a href="#">James Well</a></h5>
-                                    </div>
-                                </div>
-                                <div class="author_rating">
-                                    <div class="rating">
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/star.svg" alt=""></a>
-                                    </div>
-                                    <p>3.8 Ratings</p>
-                                </div>
-                            </div>
+                            <a href="course-details.html" class="btn_4">Học ngay</a>
+                            <h4>FREE</h4>
+                            <a href="course-details.html"><h3>{{$course->name}}</h3></a>
+                            <p><?php echo $course->description; ?></p>
+{{--                            <div class="author_info">--}}
+{{--                                <div class="author_img">--}}
+{{--                                    <img src="img/author/author_1.png" alt="">--}}
+{{--                                    <div class="author_info_text">--}}
+{{--                                        <p>Conduct by:</p>--}}
+{{--                                        <h5><a href="#">James Well</a></h5>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="author_rating">--}}
+{{--                                    <div class="rating">--}}
+{{--                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>--}}
+{{--                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>--}}
+{{--                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>--}}
+{{--                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>--}}
+{{--                                        <a href="#"><img src="img/icon/star.svg" alt=""></a>--}}
+{{--                                    </div>--}}
+{{--                                    <p>3.8 Ratings</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
 
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="single_special_cource">
-                        <img src="img/special_cource_2.png" class="special_img" alt="">
-                        <div class="special_cource_text">
-                            <a href="course-details.html" class="btn_4">design</a>
-                            <h4>$160.00</h4>
-                            <a href="course-details.html"> <h3>Web UX/UI Design </h3></a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                            <div class="author_info">
-                                <div class="author_img">
-                                    <img src="img/author/author_2.png" alt="">
-                                    <div class="author_info_text">
-                                        <p>Conduct by:</p>
-                                        <h5><a href="#">James Well</a></h5>
-                                    </div>
-                                </div>
-                                <div class="author_rating">
-                                    <div class="rating">
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/star.svg" alt=""></a>
-                                    </div>
-                                    <p>3.8 Ratings</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="single_special_cource">
-                        <img src="img/special_cource_3.png" class="special_img" alt="">
-                        <div class="special_cource_text">
-                            <a href="course-details.html" class="btn_4">Wordpress</a>
-                            <h4>$140.00</h4>
-                            <a href="course-details.html">  <h3>Wordpress Development</h3> </a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                            <div class="author_info">
-                                <div class="author_img">
-                                    <img src="img/author/author_3.png" alt="">
-                                    <div class="author_info_text">
-                                        <p>Conduct by:</p>
-                                        <h5><a href="#">James Well</a></h5>
-                                    </div>
-                                </div>
-                                <div class="author_rating">
-                                    <div class="rating">
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                        <a href="#"><img src="img/icon/star.svg" alt=""></a>
-                                    </div>
-                                    <p>3.8 Ratings</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                    @endforeach
             </div>
         </div>
     </section>

@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.homepage.homepage');
-});
-Route::get('/test', function () {
-    return view('frontend.homepage.test');
-});
+Route::get('/', 'Home\HomeController@index');
+
+Route::get('/course/{id}', 'Course\CourseController@index');
+
 Route::get('/register', function () {
     return view('frontend.account.register');
 });
@@ -31,4 +29,4 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'Home\HomeController@index')->name('home');
