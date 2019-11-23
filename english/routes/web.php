@@ -15,6 +15,8 @@ Route::get('/', 'Home\HomeController@index');
 
 Route::get('/course/{id}', 'Course\CourseController@index');
 
+Route::get('/chude/{id}', 'Course\ChudeController@index');
+
 Route::get('/register', function () {
     return view('frontend.account.register');
 });
